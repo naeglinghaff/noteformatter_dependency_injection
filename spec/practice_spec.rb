@@ -60,4 +60,12 @@ describe Diary do
     end
   end
 
+  describe '#index' do
+    it 'prints out the titles of the entries in the array' do
+      entry = double :entry, title: "title", body: "body"
+      diary.entries.push(entry)
+      expect(diary.index).to eq (entry.title)
+    end
+  end
+
 end
